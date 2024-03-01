@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tour Demo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <style>
+    #panorama {
+        width: 99vw;
+        height: 98vh;
+    }
+    </style>
+
+</head>
+
+<body>
+    
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+
+            "default": {
+                "firstScene": "kitchen",
+                "author": "Kenneth Saman",
+                "title": "Apartment 1"
+            },
+
+            "scenes": {
+                "living": {
+                    "type": "equirectangular",
+                    "panorama": "/projects/apartment1/living.png",
+                    "autoLoad": true,
+                    "hfov": 120,
+                    "yaw": -56,
+                    // "hotSpotDebug": true,
+                    "hotSpots": [
+                        {
+                            "type": "scene",
+                            "sceneId": "kitchen",
+                            "text": "To Kitchen",
+                            "pitch": -4,
+                            "yaw": -58
+                        },
+                        {
+                            "type": "scene",
+                            "sceneId": "bedroom",
+                            "text": "To Bedroom",
+                            "pitch": -4,
+                            "yaw": 8
+                        },
+                        {
+                            "type": "scene",
+                            "sceneId": "office",
+                            "text": "To Office",
+                            "pitch": -4,
+                            "yaw": -10
+                        },
+                        {
+                            "type": "scene",
+                            "sceneId": "toilet",
+                            "text": "To Bathroom",
+                            "pitch": -4,
+                            "yaw": -1
+                        }
+                    ]
+                },
+                "kitchen": {
+                    "type": "equirectangular",
+                    "panorama": "/projects/apartment1/kitchen.png",
+                    "autoLoad": true,
+                    "hfov": 120,
+                    "yaw": 124,
+                    // "hotSpotDebug": true,
+                    "hotSpots": [
+                        {
+                            "type": "scene",
+                            "sceneId": "living",
+                            "text": "To Living Room",
+                            "pitch": -13,
+                            "yaw": 123
+                        }                        
+                    ]
+                },
+                "bedroom": {
+                    "type": "equirectangular",
+                    "panorama": "/projects/apartment1/bedroom.png",
+                    "autoLoad": true,
+                    "hfov": 120,
+                    "yaw": -30,
+                    // "hotSpotDebug": true,
+                    "hotSpots": [
+                        {
+                            "type": "scene",
+                            "sceneId": "living",
+                            "text": "To Living",
+                            "pitch": -2,
+                            "yaw": 149
+                        }
+                    ]
+                },
+                "office": {
+                    "type": "equirectangular",
+                    "panorama": "/projects/apartment1/office.png",
+                    "autoLoad": true,
+                    "hfov": 120,
+                    "yaw": -126,
+                    // "hotSpotDebug": true,
+                    "hotSpots": [
+                        {
+                            "type": "scene",
+                            "sceneId": "living",
+                            "text": "To Living",
+                            "pitch": -2,
+                            "yaw": -49
+                        }
+                    ]
+                },
+                "toilet": {
+                    "type": "equirectangular",
+                    "panorama": "/projects/apartment1/toilet.png",
+                    "autoLoad": true,
+                    "hfov": 120,
+                    "yaw": -60,
+                    // "hotSpotDebug": true,
+                    "hotSpots": [
+                        {
+                            "type": "scene",
+                            "sceneId": "living",
+                            "text": "To Living",
+                            "pitch": -6,
+                            "yaw": -141
+                        }
+                    ]
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

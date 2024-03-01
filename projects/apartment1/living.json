@@ -1,0 +1,16 @@
+{
+    "type": "equirectangular",
+    "panorama": "/projects/apartment1/living.png",
+    "autoLoad": true,
+    "compass": true,
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": 0,
+        "type": "info",
+        "text": "Welcome!",
+        "URL": "https://example.com"
+      }
+    ]
+  }
+  
