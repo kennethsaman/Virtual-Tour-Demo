@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Tour Demo</title>
 
     <link rel="stylesheet" href="./pannellum/pannellum.css"/>
-    <script type="text/javascript" src="./pannellum/pannellum.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-    #panorama {
-        width: 99vw;
-        height: 98vh;
-    }
-    </style>
+    <script type="text/javascript" src="./pannellum/pannellum.js"></script>
 
 </head>
 
 <body>
-    
-    <div id="panorama"></div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="./assets/logo transparent.png">
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Sample Projects</button>
+            <div class="dropdown-content">
+                <a href="#">Apartment 1</a>
+                <a href="#" class="disabled">coming soon</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PANNELLUM -->
+    <div class="content" id="panorama"></div>
     <script>
         pannellum.viewer('panorama', {
 
@@ -33,7 +45,7 @@
 
                 "kitchen": {
                     "type": "equirectangular",
-                    "panorama": "./projects/apartment1/kitchen.png",
+                    "panorama": "./projects/apartment1/kitchen.jpg",
                     "autoLoad": true,
                     "hfov": 120,
                     "yaw": 124,
@@ -50,7 +62,7 @@
                 },
                 "living": {
                     "type": "equirectangular",
-                    "panorama": "./projects/apartment1/living.png",
+                    "panorama": "./projects/apartment1/living.jpg",
                     "autoLoad": true,
                     "hfov": 120,
                     "yaw": -56,
@@ -88,7 +100,7 @@
                 },
                 "bedroom": {
                     "type": "equirectangular",
-                    "panorama": "./projects/apartment1/bedroom.png",
+                    "panorama": "./projects/apartment1/bedroom.jpg",
                     "autoLoad": true,
                     "hfov": 120,
                     "yaw": -30,
@@ -105,7 +117,7 @@
                 },
                 "office": {
                     "type": "equirectangular",
-                    "panorama": "./projects/apartment1/office.png",
+                    "panorama": "./projects/apartment1/office.jpg",
                     "autoLoad": true,
                     "hfov": 120,
                     "yaw": -126,
@@ -122,7 +134,7 @@
                 },
                 "toilet": {
                     "type": "equirectangular",
-                    "panorama": "./projects/apartment1/toilet.png",
+                    "panorama": "./projects/apartment1/toilet.jpg",
                     "autoLoad": true,
                     "hfov": 120,
                     "yaw": -60,
